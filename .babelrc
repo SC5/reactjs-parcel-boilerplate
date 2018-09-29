@@ -1,0 +1,12 @@
+{
+  "presets": [
+    "env",
+    "stage-3",
+    "react",
+    "airbnb"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-class-properties"
+  ]
+}
