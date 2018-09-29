@@ -1,0 +1,9 @@
+{
+  "name": "reactjs-parcel-boilerplate",
+  "version": "1.0.0",
+  "description": "ReactJS and parcel base boilerplate",
+  "main": "src/index.jsx",
+  "repository": "git@github.com:SC5/reactjs-parcel-boilerplate.git",
+  "author": "Alex 'goslow' Kozlov <alex.kozlov@nordcloud.com>",
+  "license": "MIT"
+}
