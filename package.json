@@ -11,26 +11,27 @@
     "start": "parcel serve template/index.html --open"
   },
   "dependencies": {
-    "prop-types": "15.6.2",
-    "react": "16.5.2",
-    "react-dom": "16.5.2"
+    "prop-types": "15.7.1",
+    "react": "16.8.1",
+    "react-dom": "16.8.1"
   },
   "devDependencies": {
-    "@babel/core": "7.1.2",
-    "@babel/plugin-proposal-class-properties": "7.1.0",
-    "@babel/plugin-proposal-decorators": "7.1.2",
-    "@babel/plugin-syntax-dynamic-import": "7.0.0",
-    "@babel/plugin-syntax-import-meta": "7.0.0",
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-proposal-class-properties": "7.3.0",
+    "@babel/plugin-proposal-decorators": "7.3.0",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
+    "@babel/plugin-syntax-import-meta": "7.2.0",
+    "@babel/preset-env": "7.3.1",
     "@babel/preset-react": "7.0.0",
     "babel-eslint": "10.0.1",
     "cross-env": "5.2.0",
-    "eslint": "5.6.1",
+    "eslint": "5.13.0",
     "eslint-config-airbnb": "17.1.0",
-    "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-jsx-a11y": "6.1.1",
-    "eslint-plugin-react": "7.11.1",
-    "parcel-bundler": "1.10.1",
-    "react-hot-loader": "4.3.11",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-react": "7.12.4",
+    "parcel-bundler": "1.11.0",
+    "react-hot-loader": "4.6.5",
     "stylint": "1.5.9",
     "stylus": "0.54.5"
   }
