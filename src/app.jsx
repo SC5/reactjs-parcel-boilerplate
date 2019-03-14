@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './index.styl';
+import './app.styl';
 
 const App = () => (
   <div className="message-placeholder">
