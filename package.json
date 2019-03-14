@@ -7,32 +7,85 @@
   "author": "Alex 'goslow' Kozlov <alex.kozlov@nordcloud.com>",
   "license": "MIT",
   "scripts": {
-    "build": "cross-env NODE_ENV=production parcel build template/index.html --public-url ./ --no-source-maps",
-    "start": "parcel serve template/index.html --open"
+    "build": "parcel build src/index.html --no-source-maps",
+    "start": "parcel serve src/index.html --open",
+    "test": "jest",
+    "test:tdd": "jest --watch --notify"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "not ie 10"
+  ],
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
   },
   "dependencies": {
-    "prop-types": "15.7.1",
-    "react": "16.8.1",
-    "react-dom": "16.8.1"
+    "prop-types": "15.7.2",
+    "react": "16.8.4",
+    "react-dom": "16.8.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-0",
-    "@babel/plugin-proposal-class-properties": "7.3.0",
+    "@babel/core": "7.3.4",
+    "@babel/plugin-proposal-class-properties": "7.3.4",
     "@babel/plugin-proposal-decorators": "7.3.0",
     "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/plugin-syntax-import-meta": "7.2.0",
-    "@babel/preset-env": "7.3.1",
+    "@babel/plugin-transform-runtime": "7.3.4",
+    "@babel/preset-env": "7.3.4",
     "@babel/preset-react": "7.0.0",
+    "@babel/runtime": "7.3.4",
+    "autoprefixer": "9.4.10",
     "babel-eslint": "10.0.1",
-    "cross-env": "5.2.0",
-    "eslint": "5.13.0",
+    "babel-jest": "24.5.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-runtime": "6.26.0",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.11.2",
+    "enzyme-to-json": "3.3.5",
+    "eslint": "5.15.1",
     "eslint-config-airbnb": "17.1.0",
     "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jest": "22.3.2",
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.12.4",
-    "parcel-bundler": "1.11.0",
-    "react-hot-loader": "4.6.5",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "24.5.0",
+    "jest-junit": "6.3.0",
+    "parcel-bundler": "1.12.2",
+    "react-hot-loader": "4.8.0",
     "stylint": "1.5.9",
     "stylus": "0.54.5"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/node_modules/**"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "testMatch": [
+      "**/?(*.)+(spec|test).js?(x)"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|less|scss|png|styl)$": "identity-obj-proxy"
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/misc/enzyme.js"
+    ]
+  },
+  "jest-junit": {
+    "outputDirectory": "test-reports"
   }
 }
